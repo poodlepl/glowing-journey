@@ -203,3 +203,84 @@
 #### enumerator
 	enumeration-constant
 	enumeration-constant eq constant-expression
+
+#### enumeration-constant
+	identifier
+
+#### type-qualifier
+	const
+	volatile
+
+#### declarator
+	direct-declarator
+	point direct-declarator
+
+#### direct-declarator
+	identifier
+	( declarator )
+	direct-declarator [ constant-expression ]
+	direct-declarator ( )
+	direct-declarator ( parameter-type-list )
+	direct-declarator ( identifier-list )
+
+#### pointer
+	* 
+	* pointer
+	* type-qualifier-list
+	* type-qualifier-list pointer
+
+#### type-qualifier-list
+	type-qualifier
+	type-qualifier-list type-qualifier
+
+#### parameter-type-list
+    parameter-list
+    parameter-list , ...
+
+####parameter-list
+    parameter-declaration
+    parameter-list , parameter-declaration
+
+####parameter-declaration
+    declaration-specifiers declarator
+    declaration-specifiers
+    declaration-specifiers abstract-declarator
+
+#### identifier-list
+    identifier
+    identifier-list , identifier
+
+####type-name
+    specifier-qualifier-list
+    specifier-qualifier-list abstract-declarator
+
+#### abstract-declarator
+    pointer
+    direct-abstract-declarator
+    pointer direct-abstract-declarator
+
+#### direct-abstract-declarator
+    ( abstract-declarator )
+    [ ]
+    [ constant-expression ]
+    ( )
+    ( parameter-type-list )
+    direct-abstract-declarator [ ]
+    direct-abstract-declarator [ constant-expression ]
+    direct-abstract-declarator ( )
+    direct-abstract-declarator ( parameter-type-list )
+
+#### typedef-name
+    identifier
+
+#### initializer
+    assignment-expression
+    { initializer-list }
+    { initializer-list , }
+
+#### initializer-list
+    initializer
+    initializer-list , initializer
+
+# STATEMENT RULES
+
